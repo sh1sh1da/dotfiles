@@ -1,0 +1,76 @@
+// 既定値を上書きするには、このファイル内にキーバインドを挿入します
+[
+    // 移動系
+    {
+        "key": "cmd+p",
+        "command": "spaceBlockJumper.moveUp"
+    },
+    {
+        "key": "cmd+n",
+        "command": "spaceBlockJumper.moveDown"
+    },
+    {
+        "key": "cmd+shift+p",
+        "command": "spaceBlockJumper.selectUp"
+    },
+    {
+        "key": "cmd+shift+n",
+        "command": "spaceBlockJumper.selectDown"
+    },
+    {
+        "key": "cmd+f",
+        "command": "emacs.cursorWordRight"
+    },
+    {
+        "key": "cmd+b",
+        "command": "emacs.cursorWordLeft"
+    },
+    {
+        "key": "shift+cmd+,",
+        "command": "emacs.cursorTop",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+.",
+        "command": "emacs.cursorBottom",
+        "when": "editorTextFocus"
+    },
+    // コピー
+    {
+        "key": "cmd+w",
+        "command": "emacs.M-w",
+        "when": "editorTextFocus"
+    },
+    // サイドバー開閉
+    {
+        "key": "ctrl+cmd+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    // タブを閉じる
+    {
+        "key": "ctrl+x k",
+        "command": "workbench.action.closeActiveEditor"
+    },
+    // quick open
+    {
+        "key": "ctrl+;",
+        "command": "workbench.action.quickOpen"
+    },
+    // new file
+    {
+        "key": "cmd+t",
+        "command": "workbench.action.files.newUntitledFile"
+    },
+    // 補完
+    {
+        "key": "cmd+/",
+        "command": "editor.action.triggerSuggest",
+        "when": "editorTextFocus"
+    },
+    // ace jumper
+    {
+        "key": "alt+ctrl+enter",
+        "command": "extension.aceJump"
+    }
+    // TODO: ターミナル, エディタ間のジャンプ
+]
