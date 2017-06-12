@@ -1,5 +1,7 @@
 // 既定の設定を上書きするには、このファイル内に設定を挿入します
 {
     "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false
+    "telemetry.enableTelemetry": false,
+    "files.insertFinalNewline": true,
+    "workbench.colorTheme": "Visual Studio Dark"
 }
