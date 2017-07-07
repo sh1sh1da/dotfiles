@@ -9,3 +9,7 @@
 (when (eq system-type 'darwin)
   (setq ns-command-modifier (quote meta)))
 (setq set-mark-command-repeat-pop t)
+
+;; auto-complete
+(setq ac-use-menu-map t) ;; 補完候補を C-n/C-p で選択
+(global-set-key (kbd "M-/") 'auto-complete)
