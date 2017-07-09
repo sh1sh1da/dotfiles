@@ -63,19 +63,19 @@ bindkey '^R' select_history_with_peco
 # find directories
 function find_dir_with_peco() {
     local current_buffer=$BUFFER
-    local selected_dir="$(find ~/ -maxdepth 5 -type d ! -path "*/.*"| peco)"
+    local selected_dir="$(find ~ -maxdepth 5 -type d | peco)"
     if [ -d "$selected_dir" ]; then
         BUFFER=$current_buffer$selected_dir
         CURSOR=$#BUFFER
     fi
 }
 zle -N find_dir_with_peco
-bindkey '^xd' find_dir_with_peco
+bindkey '^x^d' find_dir_with_peco
 
 # find files
 function find_file_with_peco() {
     local current_buffer=$BUFFER
-    local selected_file="$(find ~/ -maxdepth 5 -type f ! -path "*/.*"| peco)"
+    local selected_file="$(find ~ -maxdepth 5 -type f | peco)"
     if [ -f "$selected_file" ]; then
         BUFFER=$current_buffer$selected_file
         CURSOR=$#BUFFER
@@ -83,3 +83,29 @@ function find_file_with_peco() {
 }
 zle -N find_file_with_peco
 bindkey '^x^f' find_file_with_peco
+
+# move to dir
+function move_to_dir_with_peco() {
+    local current_buffer=$BUFFER
+    local selected_dir="$(find ~ -maxdepth 5 -type d | peco)"
+    if [ -d "$selected_dir" ]; then
+        BUFFER="pushd $current_buffer$selected_dir"
+        CURSOR=$#BUFFER
+        zle accept-line
+    fi
+}
+zle -N move_to_dir_with_peco
+bindkey '^xd' move_to_dir_with_peco
+
+# open file with vscode
+function code_with_peco() {
+    local current_buffer=$BUFFER
+    local selected_file="$(find ~ -maxdepth 5 -type f | peco)"
+    if [ -f "$selected_file" ]; then
+        BUFFER="code $current_buffer$selected_file"
+        CURSOR=$#BUFFER
+        zle accept-line
+    fi
+}
+zle -N code_with_peco
+bindkey '^o' code_with_peco
