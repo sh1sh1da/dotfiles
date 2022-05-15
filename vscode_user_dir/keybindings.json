@@ -1,101 +1,281 @@
-// 既定値を上書きするには、このファイル内にキーバインドを挿入します
+// Place your key bindings in this file to override the defaultsauto[]
 [
-    // 移動系
-    {
-        "key": "cmd+p",
-        "command": "spaceBlockJumper.moveUp"
+  // 移動系
+  {
+    "key": "cmd+p",
+    "command": "spaceBlockJumper.moveUp"
+  },
+  {
+    "key": "cmd+n",
+    "command": "spaceBlockJumper.moveDown"
+  },
+  {
+    "key": "ctrl+cmd+p",
+    "command": "spaceBlockJumper.selectUp"
+  },
+  {
+    "key": "ctrl+cmd+n",
+    "command": "spaceBlockJumper.selectDown"
+  },
+  {
+    "key": "cmd+f",
+    "command": "emacs.cursorWordRight"
+  },
+  {
+    "key": "cmd+b",
+    "command": "emacs.cursorWordLeft"
+  },
+  {
+    "key": "shift+cmd+,",
+    "command": "emacs.cursorTop",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+.",
+    "command": "emacs.cursorBottom",
+    "when": "editorTextFocus"
+  },
+  // コピー
+  {
+    "key": "cmd+w",
+    "command": "emacs.M-w",
+    "when": "editorTextFocus && editorHasSelection"
+  },
+  // サイドバー開閉
+  {
+    "key": "ctrl+cmd+b",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  // タブを閉じる
+  {
+    "key": "ctrl+x k",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  // quick open
+  {
+    "key": "ctrl+;",
+    "command": "workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "workbench.action.quickOpen"
+  },
+  // new file
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.files.newUntitledFile"
+  },
+  // 補完
+  {
+    "key": "cmd+/",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorTextFocus"
+  },
+  // jumpy
+  {
+    "key": "shift+enter",
+    "command": "extension.jumpy-word",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+g",
+    "command": "extension.jumpy-exit",
+    "when": "editorTextFocus && jumpy.isJumpyMode"
+  },
+  // ターミナル, エディタ間のジャンプ
+  {
+    "key": "ctrl+,",
+    "command": "workbench.action.terminal.focus",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+,",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "terminalFocus"
+  },
+  // explorer
+  {
+    "key": "cmd+f",
+    "command": "explorer.newFile",
+    "when": "listFocus"
+  },
+  {
+    "key": "cmd+d",
+    "command": "explorer.newFolder",
+    "when": "listFocus"
+  },
+  {
+    "key": "enter",
+    "command": "list.select",
+    "when": "listFocus"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "list.select",
+    "when": "listFocus"
+  },
+  {
+    "key": "cmd+down",
+    "command": "-list.select",
+    "when": "listFocus"
+  },
+  {
+    "key": "cmd+r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+    "key": "enter",
+    "command": "-renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus"
+  },
+  {
+    "key": "ctrl+cmd+[",
+    "command": "scrollLineDown",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+pagedown",
+    "command": "-scrollLineDown",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+cmd+]",
+    "command": "scrollLineUp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+pageup",
+    "command": "-scrollLineUp",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "search.focus.nextInputBox",
+    "when": "inputBoxFocus && searchViewletVisible"
+  },
+  {
+    "key": "shift+cmd+e",
+    "command": "-workbench.view.explorer"
+  },
+  {
+    "key": "shift+cmd+e",
+    "command": "workbench.files.action.focusFilesExplorer"
+  },
+  {
+    "key": "cmd+;",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+/",
+    "command": "-editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+x ctrl+x",
+    "command": "workbench.action.debug.run",
+    "when": "!inDebugMode"
+  },
+  {
+    "key": "cmd+f5",
+    "command": "-workbench.action.debug.run",
+    "when": "!inDebugMode"
+  },
+  {
+    "key": "ctrl+shift+cmd+\\",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+.",
+    "command": "redo",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+cmd+tab",
+    "command": "workbench.action.switchWindow"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "editor.action.goToDeclaration",
+    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+cmd+\\",
+    "command": "editor.action.formatSelection",
+    "when": "editorHasSelection && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+cmd+=",
+    "command": "workbench.action.increaseViewSize"
+  },
+  {
+    "key": "shift+cmd+5",
+    "command": "editor.action.startFindReplaceAction"
+  },
+  {
+    "key": "ctrl+cmd+-",
+    "command": "workbench.action.decreaseViewSize"
+  },
+  {
+    "key": "ctrl+m",
+    "command": "type",
+    "args": {
+      "text": "\n"
     },
-    {
-        "key": "cmd+n",
-        "command": "spaceBlockJumper.moveDown"
-    },
-    {
-        "key": "ctrl+cmd+p",
-        "command": "spaceBlockJumper.selectUp"
-    },
-    {
-        "key": "ctrl+cmd+n",
-        "command": "spaceBlockJumper.selectDown"
-    },
-    {
-        "key": "cmd+f",
-        "command": "emacs.cursorWordRight"
-    },
-    {
-        "key": "cmd+b",
-        "command": "emacs.cursorWordLeft"
-    },
-    {
-        "key": "shift+cmd+,",
-        "command": "emacs.cursorTop",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "shift+cmd+.",
-        "command": "emacs.cursorBottom",
-        "when": "editorTextFocus"
-    },
-    // コピー
-    {
-        "key": "cmd+w",
-        "command": "emacs.M-w",
-        "when": "editorTextFocus"
-    },
-    // サイドバー開閉
-    {
-        "key": "ctrl+cmd+b",
-        "command": "workbench.action.toggleSidebarVisibility"
-    },
-    // タブを閉じる
-    {
-        "key": "ctrl+x k",
-        "command": "workbench.action.closeActiveEditor"
-    },
-    // quick open
-    {
-        "key": "ctrl+;",
-        "command": "workbench.action.quickOpen"
-    },
-    // new file
-    {
-        "key": "cmd+t",
-        "command": "workbench.action.files.newUntitledFile"
-    },
-    // 補完
-    {
-        "key": "cmd+/",
-        "command": "editor.action.triggerSuggest",
-        "when": "editorTextFocus"
-    },
-    // jumpy
-    {
-        "key": "ctrl+o",
-        "command": "extension.jumpy-word",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+g",
-        "command": "extension.jumpy-exit",
-        "when": "editorTextFocus && jumpy.isJumpyMode"
-    },
-    // ターミナル, エディタ間のジャンプ
-    {
-        "key": "ctrl+,",
-        "command": "workbench.action.terminal.focus",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+,",
-        "command": "workbench.action.focusFirstEditorGroup",
-        "when": "terminalFocus"
-    },
-    // explorer
-    {
-        "key": "cmd+e f",
-        "command": "explorer.newFile"
-    },
-    {
-        "key": "cmd+e d",
-        "command": "explorer.newFolder"
-    }
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+cmd+\\",
+    "command": "editor.action.formatSelection",
+    "when": "editorHasDocumentSelectionFormattingProvider && editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+k cmd+f",
+    "command": "-editor.action.formatSelection",
+    "when": "editorHasDocumentSelectionFormattingProvider && editorHasDocumentSelectionFormattingProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+up",
+    "command": "emacs.cursorPageUp",
+    "when": "editorTextFocus && !suggestWidgetVisible"
+  },
+  {
+    "key": "cmd+v",
+    "command": "-emacs.cursorPageUp",
+    "when": "editorTextFocus && !suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+g",
+    "command": "closeFindWidget",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "cmd+v",
+    "command": "-closeFindWidget",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "cmd+w",
+    "command": "-emacs.M-w",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+x",
+    "command": "-workbench.action.showCommands"
+  },
+  {
+    "key": "cmd+d",
+    "command": "-deleteWordRight",
+    "when": "editorTextFocus && !editorReadonly"
+  },
 ]

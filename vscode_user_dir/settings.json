@@ -1,7 +1,46 @@
-// 既定の設定を上書きするには、このファイル内に設定を挿入します
 {
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
-    "files.insertFinalNewline": true,
-    "workbench.colorTheme": "Visual Studio Dark"
+  "editor.minimap.enabled": false,
+  "workbench.editor.enablePreview": false,
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
+  "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
+  "workbench.editor.showTabs": true,
+  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7dW1sO2VyO2JwbW47Zmxvd2NoYXJ0O2Jhc2ljO2Fycm93czJcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjpcIjI0MFwiLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9IiwiLnNjcmF0Y2hwYWQiOiI8bXhsaWJyYXJ5Plt7XCJ4bWxcIjpcImpWSExEc0lnRVB5YXZWTTRxTmMrOU9USkx5RHRXa2pBTm5TMTdkOUxBVzAwTnZGQU1qdkxaR2QyUVJSMk9qblpxM1BYb0FGUmdTaGMxMUZFZGlyUUdPQk1OeUJLNEp6NUIveTQwYzFDbC9YUzRZMytFZkFvZUVoeng4aEFKV0NmUVo0bmNQakZCTkZBczBtaVVXbkNTeS9ycFI1OUdoQzVJdXZqbEptSGN1aXhYdnhjOVlSK2NwNm1vaU9jTnAwSEt0aytZV2VSM095L2pMb2hsZHp2WWpxbVVMZUt2a2c1UktKOWE5ZEZlSkIyOFNyWG5ZZmV4MG1lXCIsXCJ3XCI6MjcwLFwiaFwiOjI3MH1dPC9teGxpYnJhcnk+In0=",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "prettier.disableLanguages": ["markdown"],
+  "editor.wordWrapColumn": 120,
+  "ruby.codeCompletion": "rcodetools",
+  "ruby.intellisense": "rubyLocate",
+  "debug.node.autoAttach": "on",
+  "dart.debugExternalLibraries": false,
+  "dart.debugSdkLibraries": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "[python]": {
+    "editor.formatOnSave": false
+  },
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
+  "terminal.integrated.tabs.enabled": true,
+  "editor.formatOnSave": true,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[yaml]": {
+    "editor.formatOnSave": false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "gitlens.codeLens.scopes": ["document"]
+  },
+  "[ruby]": {
+    "editor.formatOnSave": false
+  },
+  "window.zoomLevel": 1,
+  "python.formatting.provider": "black"
 }
