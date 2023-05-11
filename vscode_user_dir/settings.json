@@ -21,13 +21,13 @@
     "editor.defaultFormatter": "octref.vetur"
   },
   "[python]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true
   },
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter.notebook.ipynb"
   },
   "terminal.integrated.tabs.enabled": true,
-  "editor.formatOnSave": true,
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
@@ -42,5 +42,8 @@
     "editor.formatOnSave": false
   },
   "window.zoomLevel": 1,
-  "python.formatting.provider": "black"
+  "python.linting.lintOnSave": false,
+  "git.path": "/usr/local/bin/git",
+  "python.analysis.typeCheckingMode": "basic",
+  "editor.inlineSuggest.enabled": true
 }
